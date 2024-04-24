@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Beautiful background color */
+            background-image: url('OriginalSree.jpg'); /* You can replace 'background.jpg' with your image */
+            background-size: contain;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%; /* Set the width as a percentage of the viewport width */
+            max-width: 800px; /* Adjust the max-width as needed */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the content */
+            border-radius: 10px; /* Rounded corners for the content */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            text-align:end;
+            position: fixed; /* Fixed positioning */
+            top: 50%; /* Place the container vertically at 50% from the top */
+            left: 50%; /* Place the container horizontally at 50% from the left */
+            transform: translate(-50%, -50%); /* Adjust to center the container perfectly */
+        }
+
+
+        .photo {
+            max-width: 100%; /* Ensure the photo doesn't exceed the container width */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center the photo horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yrr Achii to nhi bni jaisa socha tha &#128517;</h1>
+        <!-- <p>This is a simple example of a web page with a beautiful background and an A4 size photo.</p> -->
+        <img class="photo" src="https://cybertech119.github.io/SreeWebsite/SreeSketch.jpg" alt="A4 Size Photo"> <!-- Replace 'photo.jpg' with your A4 size photo -->
+    </div>
+</body>
+</html>

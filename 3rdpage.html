@@ -3,35 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Local Video Player</title>
+<title>Beautiful Responsive Page</title>
 <style>
+    /* Resetting default margin and padding */
     html, body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
     }
-    video {
+
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header styles */
+    header {
+        background-color: #343a40;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Navigation styles */
+    nav {
+        background-color: #343a40;
+        text-align: center;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #ffc107;
+    }
+
+    /* Main content styles */
+    .container {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
         width: 100%;
-        height: 100%;
+    }
+    .question {
+            color: #333;
+            margin-top: 10vh;
+            font-size: 1.5rem; /* Adjusted font size for better readability */
+            animation: fadeIn 1s ease-in-out;
+            line-height: 1.5; /* Improved line spacing */
+            padding: 0 20px; /* Added padding for better text alignment */
+    }
+    .options {
+        margin-top: 5vh;
+    }
+    .btn {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        position: absolute;
+        animation: bounceIn 0.5s ease-in-out;
+        border: none; /* Remove default button border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+        touch-action: manipulation; /* Improve touch responsiveness */
+    }
+    #yesBtn {
+        background-color: #4caf50;
+        color: white;
+        top: 40.3%;
+        left: 10%;
+        border: 2px solid #357e3f; /* Add border */
+    }
+    #noBtn {
+        background-color: #f44336;
+        color: white;
+        border: 2px solid #b52b2b; /* Add border */
+    }
+    .btn:hover {
+        transform: scale(1.05); /* Add hover effect */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+    }
+    h6 {
+        margin: 5px 0; /* Adjusted margin for h6 elements */
+    }
+    @media (max-width: 600px) {
+        .btn {
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+        .question {
+            font-size: 1.2rem; /* Adjusted font size for smaller screens */
+        }
+        #yesBtn, #noBtn {
+            position: relative; /* Reset button position for smaller screens */
+            top: 0;
+            left: 0;
+            transform: none;
+        }
+    }
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    @keyframes bounceIn {
+        0% {transform: scale(0);}
+        50% {transform: scale(1.2);}
+        100% {transform: scale(1);}
     }
 </style>
 </head>
 <body>
-    <video id="videoPlayer" autoplay controls>
-        <!-- Replace the src attribute value with the direct link to your Google Drive video file -->
-        <source src="https://drive.google.com/file/d/1zcmZVQuWtu1ut0GXX6lxBsc7JgXkJ82B/view?usp=sharing" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
-    <script>
-        window.onload = function() {
-            var video = document.getElementById('videoPlayer');
-            video.addEventListener('loadedmetadata', function() {
-                video.requestFullscreen(); // Request full screen when the video is loaded
-            });
-        };
-    </script>
+<header>
+    <h1>Wish you a very Happy Birthday Sree</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="C:\Users\Asus\Desktop\SreeWebsite\SreeWebsite\Sketch.html" id="surprise1">Surprise 1</a></li>
+        <li><a href="#">Surprise 2</a></li>
+        <li><a href="https://drive.google.com/file/d/1zcmZVQuWtu1ut0GXX6lxBsc7JgXkJ82B/view?usp=sharing">Surprise 3</a></li>
+    </ul>
+</nav>
+
+<div class="question">
+    <h1>Here are your Three Gifts. Click One of them. For best Experience, please try to open serial Wise &#128513;</h1>
+</div>
+<div class="options">
+</div>
+
+<script>
+    // Function to show a message when Surprise 1 is clicked
+    document.getElementById('surprise1').addEventListener('click', function() {
+        alert("Please zoom out the next page for the best experience!");
+    });
+</script>
+
+<footer>
+    <p>Small present from Sahil Srivastava</p>
+</footer>
+
 </body>
 </html>
